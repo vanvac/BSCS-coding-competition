@@ -1,0 +1,1 @@
+This is a git repo for a coding competition that is happening in our school
