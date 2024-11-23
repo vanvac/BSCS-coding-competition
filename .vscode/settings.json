@@ -1,6 +1,8 @@
 {
   "C_Cpp_Runner.msvcBatchPath": "",
   "files.associations": {
-    "stdbool.h": "c"
+    "stdbool.h": "c",
+    "time.h": "c",
+    "halloworld.h": "c"
   }
 }
