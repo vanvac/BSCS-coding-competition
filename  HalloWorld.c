@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 //#include <math.h>
+
+
 char *snakeToCamel(char *snakeStr) {
   int i = 0;
   int j = 0;
@@ -12,16 +14,14 @@ char *snakeToCamel(char *snakeStr) {
   char *camelStr = malloc(len + 1);
 
   for (i = 0; i < len; i++) {
-    if (snakeStr[i] == '_'){
+    if (snakeStr[i] == '_') {
       isNextUpper = true;
       continue;
-    }
-    else if (isNextUpper) {
+    } else if (isNextUpper) {
       // 32 is the distance bettween upper and lowercase characters in ASCII character set eg. d= 100 and D = 68 which is 32 less
       camelStr[j++] = toupper(snakeStr[i]);
       isNextUpper = false;
-    }
-    else {
+    } else {
       camelStr[j++] = snakeStr[i];
     }
   }
