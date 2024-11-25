@@ -1,4 +1,13 @@
-garden = ''''''
+garden = '''╔════════╗
+║.;~┌ ┐¸.║
+║.┌.:┐;:.║
+║ '~~¸::;║
+║.¸.,; ¸`║
+║~└~~┘ : ║
+║:¸¸...`.║
+║` '└:┘' ║
+║¸,.;':~~║
+╚════════╝'''
 
 def splitIntoMultidimList(WeirdString):
   MultidimList = []
@@ -9,8 +18,8 @@ def splitIntoMultidimList(WeirdString):
 
 def findBox(multiDimList):
   boxIndexList = []
-  for y,  layer in enumerate(multiDimList):
-    for x, char in enumerate(layer):
+  for x,  layer in enumerate(multiDimList):
+    for y, char in enumerate(layer):
       if char == '┌':
         boxIndexList.append([x, y, '┌'])
       elif char == '┐':
@@ -21,3 +30,7 @@ def findBox(multiDimList):
         boxIndexList.append([x, y, '┘'])
   return boxIndexList
 
+def findSnakeArea(multiDimList):
+  pass
+
+print(findBox(splitIntoMultidimList(garden)))
