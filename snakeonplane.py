@@ -173,7 +173,8 @@ def findSnakeArea(multiDimList):
   totalArea = findTotalArea(overlapCountArray)
   
   return totalArea, areaList
-
+  
+  
 totalArea, areaList = findSnakeArea(splitIntoMultidimList(garden))
 numOfSnakes, largestSnakeArea = len(areaList), max(areaList)
 print(f'Total area: {totalArea} \nNumber of snakes: {numOfSnakes} \nLargest snake area: {largestSnakeArea}')
